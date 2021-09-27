@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[node name="Level1" type="Spatial"]
+
+[node name="boxy" type="RigidBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="boxy"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="boxy"]
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.860662, 0.509177, 0, -0.509177, 0.860662, 0, 3.09179, 5.93043 )
